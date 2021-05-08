@@ -8,7 +8,7 @@
             <div class="card border-dark mb-3">
               <div class="card-header bit-bold">Learning with fun</div>
               <div class="card-body text-dark">
-                <p class="card-text">We beleive learning shouldn't be something boring. That's why we want to teach you english in fun ways !</p>
+                <p class="card-text">We believe learning shouldn't be something boring. That's why we want to teach you english in fun ways !</p>
               </div>
             </div>
           </div>
