@@ -24,16 +24,16 @@
                 <h3 class="col-lg-2 col-sm-6 alert alert-secondary my-5">Score : <span class="bold">{{ score }}/10</span></h3>
                 <div id="col-12 audio-container">
                     <!-- ANIMALS -->
-                    <audio v-if="sounds[theme][currentIndex] == 'cat'" controls="controls" preload="auto" src="../assets/sounds/cat.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'cat'" controls="controls" preload="auto" src="/assets/sounds/cat.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'cicada'" controls="controls" preload="auto" src="../assets/sounds/cicada.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'cicada'" controls="controls" preload="auto" src="/assets/sounds/cicada.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'cricket'" controls="controls" preload="auto" src="../assets/sounds/cricket.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'cricket'" controls="controls" preload="auto" src="/assets/sounds/cricket.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'donkey'" controls="controls" preload="auto" src="../assets/sounds/donkey.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'donkey'" controls="controls" preload="auto" src="/assets/sounds/donkey.mp3">
                         Your browser does not support the audio tag.
                     </audio>
                     <audio v-if="sounds[theme][currentIndex] == 'dog'" controls="controls" preload="auto" src="/assetsd/soundsd/dog.mp3">
@@ -56,42 +56,42 @@
                     </audio>
 
                     <!-- COMMONS -->
-                    <audio v-if="sounds[theme][currentIndex] == 'car'" controls="controls" preload="auto" src="../assets/sounds/car.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'car'" controls="controls" preload="auto" src="/assets/sounds/car.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'plane'" controls="controls" preload="auto" src="../assets/sounds/plane.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'plane'" controls="controls" preload="auto" src="/assets/sounds/plane.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'doorbell'" controls="controls" preload="auto" src="../assets/sounds/doorbell.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'doorbell'" controls="controls" preload="auto" src="/assets/sounds/doorbell.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'fireworks'" controls="controls" preload="auto" src="../assets/sounds/fireworks.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'fireworks'" controls="controls" preload="auto" src="/assets/sounds/fireworks.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'helicopter'" controls="controls" preload="auto" src="../assets/sounds/helicopter.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'helicopter'" controls="controls" preload="auto" src="/assets/sounds/helicopter.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'siren'" controls="controls" preload="auto" src="../assets/sounds/siren.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'siren'" controls="controls" preload="auto" src="/assets/sounds/siren.mp3">
                         Your browser does not support the audio tag.
                     </audio>
 
                     <!-- INSTRUMENT -->
-                    <audio v-if="sounds[theme][currentIndex] == 'cello'" controls="controls" preload="auto" src="../assets/sounds/cello.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'cello'" controls="controls" preload="auto" src="/assets/sounds/cello.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'drums'" controls="controls" preload="auto" src="../assets/sounds/drums.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'drums'" controls="controls" preload="auto" src="/assets/sounds/drums.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'guitar'" controls="controls" preload="auto" src="../assets/sounds/guitar.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'guitar'" controls="controls" preload="auto" src="/assets/sounds/guitar.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'piano'" controls="controls" preload="auto" src="../assets/sounds/piano.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'piano'" controls="controls" preload="auto" src="/assets/sounds/piano.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'trumpet'" controls="controls" preload="auto" src="../assets/sounds/trumpet.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'trumpet'" controls="controls" preload="auto" src="/assets/sounds/trumpet.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'violin'" controls="controls" preload="auto" src="../assets/sounds/violin.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'violin'" controls="controls" preload="auto" src="/assets/sounds/violin.mp3">
                         Your browser does not support the audio tag.
                     </audio>
                 </div>
