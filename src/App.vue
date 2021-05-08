@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header @clickedHome="doShowHome()" @clickedSound="doShowSound()" @clickedDrag="doShowDrag()" @clickedBac="doShowBac()"/>
+    <HeaderComp @clickedHome="doShowHome()" @clickedSound="doShowSound()" @clickedDrag="doShowDrag()" @clickedBac="doShowBac()"/>
     <div class="container">
       <home v-if="showHome"/>
       <sound v-if="showSound"/>
@@ -13,7 +13,7 @@
 
 <script>
 import Home from "./components/Home.vue"
-import Header from "./components/Header.vue"
+import HeaderComp from "./components/HeaderComp.vue"
 import Bac from "./components/Bac.vue"
 import DragNDrop from "./components/DragNDrop.vue"
 import Sound from "./components/Sound.vue"
@@ -24,7 +24,7 @@ export default {
   components: {
     Bac,
     Home,
-    Header,
+    HeaderComp,
     DragNDrop,
     Sound,
     Footer
@@ -73,6 +73,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0;
 }
 </style>

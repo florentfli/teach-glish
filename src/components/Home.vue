@@ -1,6 +1,6 @@
 <template>
-    <div class="container pt-3">
-        <h1 class="my-5 bold">Home</h1>
+    <div class="container pt-1">
+        <h1 class="my-3 bold">Home</h1>
         <h2 class="my-5">Welcome to <b>Teach'Glish</b>, the fun way to teach yourself english !</h2>
         
         <div class="row justify-content-sm-center">
