@@ -14,7 +14,10 @@
                 Time left :<br>
                 <h4 :class="timer <= 10 ? 'red bold' : 'bold'">{{formatTwoDigit(Math.floor(timer / 60))}}:{{formatTwoDigit((timer % 60))}}</h4>
             </div>
-            <div v-else class="mb-5 col-3 alert alert-secondary">Time left :<br><h4 :class="timer <= 10 ? 'red bold' : 'bold'">{{formatTwoDigit(Math.floor(timeLeft / 60))}}:{{formatTwoDigit((timeLeft % 60))}}</h4></div>
+            <div v-else class="mb-5 col-lg-3 col-sm-12 alert alert-secondary">
+                Time left :<br>
+                <h4 :class="timer <= 10 ? 'red bold' : 'bold'">{{formatTwoDigit(Math.floor(timeLeft / 60))}}:{{formatTwoDigit((timeLeft % 60))}}</h4>
+            </div>
             
             <div class="table-responsive">
                 <table class="table table-bordered mb-5 col-sm-12 table-condensed cf">
@@ -43,12 +46,16 @@
             <button v-if="!timerOver" class="btn btn-lg btn-primary col-lg-3 col-sm-8" @click.prevent="validateForm()">Submit !</button>
         </div>
         <div v-if="timerOver" class="row justify-content-sm-center">
-            <div class="col-6 alert alert-warning">
+            <div class="col-lg-6 col-sm-10 alert alert-warning">
                 <h1>Time over !</h1>
                 <h2 class="mt-3">Score : <span class="bold">{{score}}</span></h2>
                 <div class="row justify-content-sm-center my-4">
-                    <button class="col-4 btn btn-md btn-primary mx-3" @click.prevent="reset()">Play again !</button>
-                    <button class="col-4 btn btn-md btn-secondary mx-3" @click.prevent="refresh()">Back to home !</button>
+                    <div class="px-3 col-lg-3 col-sm-6 mb-3">
+                        <button class="btn btn-md btn-primary w-100" @click.prevent="reset()">Play again !</button>
+                    </div>
+                    <div class="px-3 col-lg-3 col-sm-6">
+                        <button class="btn btn-md btn-secondary w-100" @click.prevent="refresh()">Back to home !</button>
+                    </div>
                 </div>
             </div>
         </div>

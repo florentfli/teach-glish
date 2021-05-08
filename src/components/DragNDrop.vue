@@ -14,7 +14,7 @@
                     <h4 class="mb-4">Find the coresponding word described by the phrase :</h4>
                     <h1>Phrase: <span class="bitbold black">{{currentPhrase.phrase}}</span></h1>
                     <div v-show="!success && !fail" class="my-4 row justify-content-sm-center">
-                        <div v-for="mot in mots[theme]" :key="mot.value" class="m-3 btn-group-vertical col-lg-2 col-sm-10" >
+                        <div v-for="mot in mots[theme]" :key="mot.value" class="p-3 btn-group-vertical col-lg-2 col-sm-3" >
                             <button :id="`btn-`+mot.value" type="button" 
                             class="btn btn-secondary btn-lg white" 
                             @click.prevent="clickButton(mot)">{{mot.value}}</button>
@@ -23,20 +23,26 @@
                 </div>
                 <div v-else>
                     <h2 class="my-5">Chose a theme</h2>
-                    <div class="row mt-5 justify-content-md-center">
-                        <button class="col-2 mx-3 btn btn-lg btn-primary" @click.prevent="hasChoseTheme('animals')">Animals</button>
-                        <button class="col-2 mx-3 btn btn-lg btn-primary" @click.prevent="hasChoseTheme('object')">Object</button>
-                        <button class="col-2 mx-3 btn btn-lg btn-primary" @click.prevent="hasChoseTheme('celebrity')">Celebrity</button>
+                    <div class="row justify-content-sm-center">
+                        <div class="col-lg-2 col-sm-8 my-3">
+                            <button class="w-100 btn btn-lg btn-primary" @click.prevent="hasChoseTheme('animals')">Animals</button>
+                        </div>
+                        <div class="col-lg-2 col-sm-8 my-3">
+                            <button class="w-100 btn btn-lg btn-primary" @click.prevent="hasChoseTheme('object')">Object</button>
+                        </div>
+                        <div class="col-lg-2 col-sm-8 my-3">
+                            <button class="w-100 btn btn-lg btn-primary" @click.prevent="hasChoseTheme('celebrity')">Celebrity</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-3 justify-content-md-center">
-                <div v-if="success" class="col-6 alert alert-success pt-4">
+            <div class="row mt-3 justify-content-sm-center">
+                <div v-if="success" class="col-lg-6 col-sm-10 alert alert-success pt-4">
                     <h3>Your answer : <span class="bitbold">{{userChoice.value}}</span></h3>
                     <h2>Congrats ! Keep going !</h2>
                     <button @click.prevent="hideResult()" class="btn btn-secondary my-3">Next phrase</button>
                 </div>
-                <div v-if="fail" class="col-6 alert alert-danger pt-4">
+                <div v-if="fail" class="col-lg-6 col-sm-10 alert alert-danger pt-4">
                     <h3>Your answer : <span class="bitbold">{{userChoice.value}}</span></h3>
                     <h2>Wrong ! The good answer was <b>{{ currentPhrase.value}}</b></h2>
                     <button @click.prevent="hideResult()" class="btn btn-secondary my-3">Next phrase</button>
@@ -44,17 +50,17 @@
             </div>
         </div>
         <div class="row justify-content-md-center" v-else>
-            <div v-if="score >= mots[theme].length / 2" class="col-6 px-5 py-4 my-4 alert alert-success">
+            <div v-if="score >= mots[theme].length / 2" class="col-lg-6 col-sm-10 px-5 py-4 my-4 alert alert-success">
                 <h1 class="bitbold">Game over !</h1>
                 <h2 class="my-4">Your score is <span class="bitbold">{{score}}/{{mots[theme].length}}</span> !</h2>
                 <button class="btn btn-lg btn-primary m-3" @click.prevent="reset()">Play Again</button>
                 <button class="btn btn-lg btn-secondary m-3" @click.prevent="refreshPage()">Back to the menu</button>
             </div>
-            <div v-else class="col-6 px-5 py-4 my-4 alert alert-danger">
+            <div v-else class="col-lg-6 col-sm-10 px-5 py-4 my-4 alert alert-danger">
                 <h1 class="bitbold">Game over...</h1>
                 <h2 class="my-4">Your score is <span class="bitbold">{{score}}/{{mots[theme].length}}</span>...</h2>
-                <button class="btn btn-lg btn-primary m-3" @click.prevent="reset()">Play Again</button>
-                <button class="btn btn-lg btn-secondary m-3" @click.prevent="refreshPage()">Back to the menu</button>
+                <button class="btn btn-lg btn-primary my-3 w-100" @click.prevent="reset()">Play Again</button>
+                <button class="btn btn-lg btn-secondary my-3 w-100" @click.prevent="refreshPage()">Back to the menu</button>
             </div>
         </div>
     </div>
@@ -204,6 +210,10 @@ export default{
         },
         launchDrag(){
             this.dragGo = true;
+        },
+        reset(){
+            this.gameOver=false;
+            this.dragGo=false;
         },
         resetBtn(){
             for(let i=0; i < this.mots[this.theme].length; i++){

@@ -21,8 +21,8 @@
                 </div>
             </div>
             <div v-else class="justify-content-sm-center row">
-                <h3 class="col-lg-2 col-sm-6 alert alert-secondary my-5">Score : <span class="bold">{{ score }}/10</span></h3>
-                <div id="col-12 audio-container">
+                <h3 class="col-lg-2 col-sm-12 alert alert-secondary my-3 p-3">Score : <span class="bold">{{ score }}/10</span></h3>
+                <div id="col-lg-12 audio-container">
                     <!-- ANIMALS -->
                     <audio v-if="sounds[theme][currentIndex] == 'cat'" controls="controls" preload="auto" src="/assets/sounds/cat.mp3">
                         Your browser does not support the audio tag.
@@ -36,19 +36,19 @@
                     <audio v-if="sounds[theme][currentIndex] == 'donkey'" controls="controls" preload="auto" src="/assets/sounds/donkey.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'dog'" controls="controls" preload="auto" src="/assetsd/soundsd/dog.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'dog'" controls="controls" preload="auto" src="/assets/sounds/dog.mp3">
                         Your browser does not support the audio tag.
                     </audio>    
-                    <audio v-if="sounds[theme][currentIndex] == 'duck'" controls="controls" preload="auto" src="/assetsd/soundsd/duck.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'duck'" controls="controls" preload="auto" src="/assets/sounds/duck.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'elephant'" controls="controls" preload="auto" src="/assetsd/soundsd/elephant.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'elephant'" controls="controls" preload="auto" src="/assets/sounds/elephant.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'goat'" controls="controls" preload="auto" src="/assetsd/soundsd/goat.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'goat'" controls="controls" preload="auto" src="/assets/sounds/goat.mp3">
                         Your browser does not support the audio tag.
                     </audio>
-                    <audio v-if="sounds[theme][currentIndex] == 'sheep'" controls="controls" preload="auto" src="/assetsd/soundsd/sheep.mp3">
+                    <audio v-if="sounds[theme][currentIndex] == 'sheep'" controls="controls" preload="auto" src="/assets/sounds/sheep.mp3">
                         Your browser does not support the audio tag.
                     </audio>
                     <audio v-if="sounds[theme][currentIndex] == 'wolf'" controls="controls" preload="auto" src="/assets/sounds/wolf.mp3">
@@ -96,7 +96,7 @@
                     </audio>
                 </div>
                 
-                <div class="row justify-content-md-center mt-4">
+                <div class="row justify-content-sm-center mt-4">
                     <div class="col-lg-4 col-sm-12">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">Your guess</span>
@@ -104,8 +104,8 @@
                         </div>
                     </div>
                 </div>
-                <button v-if="nbRound == 1" class="mt-3 col-2 btn btn-lg btn-success" @click="guess()">Guess !</button>
-                <div v-else class="my-5 row justify-content-md-center">
+                <button v-if="nbRound == 1" class="mt-3 col-lg-2 col-sm--10 btn btn-lg btn-success" @click="guess()">Guess !</button>
+                <div v-else class="mt-3 row justify-content-sm-center">
                     <div v-if="isCorrect" class="alert alert-success col-lg-4 col-sm-12">
                         <h3>Good job !</h3>
                         <button class="btn btn-md btn-success" @click.prevent="next()">Next sound</button>
@@ -122,8 +122,8 @@
                 </div>
             </div>
         </div>
-        <div v-else class="row justify-content-md-center">
-            <div class="col-6 py-5 my-5 alert alert-warning" v-if="gameOver">
+        <div v-else class="row justify-content-sm-center">
+            <div class="col-ls-6 col-sm-12 py-5 my-5 alert alert-warning" v-if="gameOver">
                 <h1 v-if="score > sounds[theme].lenght / 2">Finished ! Good job !</h1>
                 <h1 v-else>Game over... Try again !</h1>
                 <h2 class="mt-3">Ton score est de : {{ score }} / 10</h2>
@@ -168,7 +168,7 @@ export default{
          guess() {
             var userGuess = document.getElementById('user-guess');
             
-            if(this.sounds[this.theme][this.currentIndex] == userGuess.value){
+            if(this.sounds[this.theme][this.currentIndex] == userGuess.value.toLowerCase()){
                 this.score++;
                 this.isCorrect = true;
                 this.isWrong = false;
